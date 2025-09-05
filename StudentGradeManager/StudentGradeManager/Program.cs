@@ -10,12 +10,16 @@ namespace StudentGradeManager
 {
     class Program
     {
-        private const string connectionString = 
-            "Server=DESKTOP-6PMMSOE\\SQLEXPRESS01;Database=StudentSystem;Trusted_Connection=True;TrustServerCertificate=True;Encrypt=True;";
         static void Main()
         {
             try
             {
+                string serverName = ReadFromConsole.ReadNonEmptyString("Enter your SQL Server name (e.g., localhost\\SQLEXPRESS): ");
+                string dbName = ReadFromConsole.ReadNonEmptyString("Enter database name: ");
+                if (dbName.Length == 0)
+                    dbName = "StudentSystem";
+                
+                string connectionString = $"Server={serverName};Database={dbName};Trusted_Connection=True;TrustServerCertificate=True;Encrypt=True;";
                 Database db = new Database(connectionString);
 
                 Console.WriteLine("Welcome to Daskalo!");
