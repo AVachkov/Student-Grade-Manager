@@ -27,6 +27,8 @@ cd Student-Grade-Manager
 
 Run the console app and follow the menu
 
+> ⚠️ Note: Add a single record to table Headmasters to append yourself as a headmaster privately (used because otherwise anyone could become a headmaster)
+
 ## Contributing
 
 Contributions are welcome! If you want to help improve the project:
