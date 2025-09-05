@@ -15,7 +15,7 @@ CREATE TABLE Headmasters
 (
     Id            INT IDENTITY(1,1) PRIMARY KEY,   -- Unique headmaster ID
     Username      NVARCHAR(50) NOT NULL,           -- Login username
-    PasswordHash  NVARCHAR(255) NOT NULL,          -- Hashed password
+    Password      NVARCHAR(255) NOT NULL,          -- Hashed password
     FullName      NVARCHAR(100) NOT NULL,          -- Full name
     SchoolName    NVARCHAR(100) NOT NULL,          -- School they manage
     ContactInfo   NVARCHAR(100) NOT NULL           -- Email or phone
