@@ -2,7 +2,7 @@
 
 A console application in C# for simulating school system. Supports multiple classes, database storage, and basic CRUD operations.
 
-⚠️ Note: This program requires SQL Server to run. SQLite or other databases are **not supported**.
+> ⚠️ Note: This program requires SQL Server to run. SQLite or other databases are **not supported**.
 
 ## Technologies
 
@@ -27,8 +27,13 @@ cd Student-Grade-Manager
 
 Run the console app and follow the menu
 
-> ⚠️ Note: Add a single record to table Headmasters to append yourself as a headmaster privately (used because otherwise anyone could become a headmaster)
+> ⚠️ Note: To become a headmaster in the system, you need to add a single record to the Headmasters table manually. This prevents anyone from creating a headmaster account through the console app.
 
+Example insert query:
+```bash
+INSERT INTO Headmasters (Username, Password, FullName, SchoolName, ContactInfo)
+VALUES ('your_username_here', 'password_here', 'full_name_here', 'school_name_here', 'contact_info_here@example.com');
+```
 ## Contributing
 
 Contributions are welcome! If you want to help improve the project:
